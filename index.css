@@ -1,0 +1,23 @@
+body {
+    font-family: Helvetica, sans-serif;
+    color: #304B4B;
+    margin: 0;
+    background-color: #F5F5F5
+}
+  
+.topDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+h1, h2{
+    background-color:  #F28F3B;
+    margin-top: 0px;
+  }
+  
+div {
+    border: solid 1px;
+    margin-top: 10px;
+}
