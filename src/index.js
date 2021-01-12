@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import './index.css';
+
 function handleFormSubmit() {
     $('form').on('submit', (event) => {
         event.preventDefault();
@@ -22,20 +25,21 @@ function getResults(location, maxResults) {
             }
             throw new Error(response.statusText);
         })
-        .then((responseJson) => render(responseJson))
+        .then((responseJson) => renderUI(responseJson))
         .catch((error) => {
             console.log('Something went wrong', error);
         });
 }
 
-function render(responseJson) {
-
+function renderUI(responseJson) {
     $('.results').empty();
-
     let results = responseJson.data.map((park) => {
-        return `<div>
-      <h2>${park.fullName}</h2><a href="${park.url}">Visit the Park Website</a><p>${park.description}</p>
-      </div>`;
+        return `
+        <div>
+            <h2>${park.fullName}</h2>
+            <a href="${park.url}">Visit the Park Website</a>
+            <p>${park.description}</p>
+        </div>`;
     });
 
     results = results.join('');

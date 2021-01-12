@@ -2,10 +2,11 @@ body {
     font-family: Helvetica, sans-serif;
     color: #304B4B;
     margin: 0;
-    background-color: #F5F5F5
+    background-color: #F5F5F5;
+    padding: 15px;
 }
   
-.topDisplay{
+.topDisplay, p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,6 +16,7 @@ body {
 h1, h2{
     background-color:  #F28F3B;
     margin-top: 0px;
+    padding: 5px;
   }
   
 div {
